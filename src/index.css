@@ -1,0 +1,52 @@
+@import "tailwindcss"; 
+
+@theme {
+    --breakpoint-*: initial;
+    --breakpoint-xs: 480px;
+    --breakpoint-sm: 768px;
+    --breakpoint-md: 1060px;
+    --color-gray-20: #f8f4eb;
+    --color-gray-50: #efe6e6;
+    --color-gray-100: #dfcccc;
+    --color-gray-500: #5e0000;
+    --color-primary-100: #ffe1e0;
+    --color-primary-300: #ffa6a3;
+    --color-primary-500: #ff6b66;
+    --color-secondary-400: #ffcd58;
+    --color-secondary-500: #ffc132;
+    --font-dmsans: "DM Sans", sans-serif;
+    --font-montserrat: "Montserrat", sans-serif
+}
+
+@layer base {
+    * {
+        @apply box-border;
+    }
+    html, body, #root, .app{
+        @apply h-full w-full font-dmsans text-gray-500;
+    }
+}
+
+.gradient-yellowred{
+    background-image: linear-gradient(90deg, #ff616a 0%, #ffc837 100%);
+}
+.mobile-home{
+    background-image: url("./assets/HomePageGraphic.png");
+}
+
+@media screen and (min-width:1060px) {
+    .evolvetext::before{
+        content: url('./assets/EvolveText.png');
+    }
+}
+
+.abstract::before{
+    content: url('./assets/AbstractWaves.png');
+}
+.sparkles::before{
+    content: url('./assets/Sparkles.png');
+}
+.circles{
+    content:url('./assets/Circles.png');
+}
+
